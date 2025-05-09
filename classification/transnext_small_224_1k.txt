@@ -1,0 +1,52 @@
+$ python main.py --config configs/transnext_small.py --data-path data/imagenet/ --resume checkpoints/transnext_small_224_1k.pth --eval
+swattention package not found, loading PyTorch native version of Aggregated Attention
+Not using distributed mode
+Namespace(fp32_resume=False, batch_size=128, epochs=300, update_freq=1, config='configs/transnext_small.py', model='transnext_small', input_size=224, pretrain_size=None, fixed_pool_size=None, drop=0.0, drop_path=0.45, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=1.0, momentum=0.9, weight_decay=0.05, sched='cosine', lr=0.001, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=5, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, color_jitter=0.4, aa='rand-m9-mstd0.5-inc1', smoothing=0.1, train_interpolation='bicubic', repeated_aug=True, reprob=0.25, remode='pixel', recount=1, resplit=False, mixup=0.8, cutmix=1.0, cutmix_minmax=None, mixup_prob=1.0, mixup_switch_prob=0.5, mixup_mode='batch', finetune='', data_path='data/imagenet/', data_set='IMNET', use_mcloader=False, inat_category='name', output_dir='checkpoints/transnext_small', device='cuda', seed=0, resume='checkpoints/transnext_small_224_1k.pth', start_epoch=0, eval=True, dist_eval=False, num_workers=10, pin_mem=True, compile_model=True, cache_size_limit=128, world_size=1, dist_url='env://', distributed=False)
+Creating model: transnext_small
+C:\Python311\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ..\aten\src\ATen\native\TensorShape.cpp:3484.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+number of params: 49741564
+LR = 0.00100000
+Batch size = 128
+Update frequent = 1
+<All keys matched successfully>
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+swattention package not found, loading PyTorch native version of Aggregated Attention
+Test:  [  0/261]  eta: 1:54:49  loss: 0.3509 (0.3509)  acc1: 93.2292 (93.2292)  acc5: 98.4375 (98.4375)  time: 26.3972  data: 22.9624  max mem: 6354
+Test:  [ 10/261]  eta: 0:14:59  loss: 0.4122 (0.4868)  acc1: 91.6667 (89.0625)  acc5: 99.4792 (98.9583)  time: 3.5840  data: 2.0875  max mem: 6355
+Test:  [ 20/261]  eta: 0:09:59  loss: 0.7096 (0.6301)  acc1: 83.3333 (84.9206)  acc5: 97.9167 (98.0903)  time: 1.2917  data: 0.0000  max mem: 6355
+Test:  [ 30/261]  eta: 0:08:04  loss: 0.5117 (0.5498)  acc1: 89.0625 (87.5840)  acc5: 98.4375 (98.2695)  time: 1.2814  data: 0.0001  max mem: 6355
+Test:  [ 40/261]  eta: 0:06:59  loss: 0.3271 (0.5101)  acc1: 93.7500 (88.7449)  acc5: 98.9583 (98.3486)  time: 1.2825  data: 0.0003  max mem: 6355
+Test:  [ 50/261]  eta: 0:06:15  loss: 0.5392 (0.5458)  acc1: 88.5417 (88.0004)  acc5: 97.9167 (98.0290)  time: 1.2833  data: 0.0002  max mem: 6355
+Test:  [ 60/261]  eta: 0:05:41  loss: 0.5666 (0.5478)  acc1: 86.9792 (88.0038)  acc5: 96.8750 (98.0191)  time: 1.2824  data: 0.0000  max mem: 6355
+Test:  [ 70/261]  eta: 0:05:13  loss: 0.5666 (0.5503)  acc1: 87.5000 (87.7861)  acc5: 98.4375 (98.0854)  time: 1.2820  data: 0.0001  max mem: 6355
+Test:  [ 80/261]  eta: 0:04:48  loss: 0.5150 (0.5625)  acc1: 87.5000 (87.5450)  acc5: 98.4375 (98.0774)  time: 1.2824  data: 0.0001  max mem: 6355
+Test:  [ 90/261]  eta: 0:04:26  loss: 0.4896 (0.5545)  acc1: 88.5417 (87.6889)  acc5: 98.4375 (98.1170)  time: 1.2844  data: 0.0000  max mem: 6355
+Test:  [100/261]  eta: 0:04:06  loss: 0.6005 (0.5656)  acc1: 89.5833 (87.4227)  acc5: 98.4375 (98.0611)  time: 1.2801  data: 0.0001  max mem: 6355
+Test:  [110/261]  eta: 0:03:47  loss: 0.6526 (0.5807)  acc1: 84.3750 (87.0308)  acc5: 97.3958 (97.9448)  time: 1.2756  data: 0.0002  max mem: 6355
+Test:  [120/261]  eta: 0:03:30  loss: 0.6716 (0.5982)  acc1: 83.8542 (86.6262)  acc5: 95.8333 (97.7488)  time: 1.2784  data: 0.0001  max mem: 6355
+Test:  [130/261]  eta: 0:03:13  loss: 0.8642 (0.6305)  acc1: 79.1667 (85.8063)  acc5: 95.3125 (97.5310)  time: 1.2848  data: 0.0000  max mem: 6355
+Test:  [140/261]  eta: 0:02:57  loss: 0.9202 (0.6510)  acc1: 76.5625 (85.3132)  acc5: 95.3125 (97.4217)  time: 1.3036  data: 0.0002  max mem: 6355
+Test:  [150/261]  eta: 0:02:41  loss: 0.8050 (0.6528)  acc1: 81.7708 (85.3028)  acc5: 95.8333 (97.3751)  time: 1.3059  data: 0.0002  max mem: 6355
+Test:  [160/261]  eta: 0:02:25  loss: 0.6974 (0.6595)  acc1: 84.8958 (85.1999)  acc5: 95.8333 (97.2664)  time: 1.3107  data: 0.0003  max mem: 6355
+Test:  [170/261]  eta: 0:02:10  loss: 0.8752 (0.6788)  acc1: 78.1250 (84.7222)  acc5: 94.2708 (97.0638)  time: 1.3307  data: 0.0004  max mem: 6355
+Test:  [180/261]  eta: 0:01:55  loss: 0.8770 (0.6852)  acc1: 79.1667 (84.5477)  acc5: 95.3125 (97.0102)  time: 1.3190  data: 0.0003  max mem: 6355
+Test:  [190/261]  eta: 0:01:41  loss: 0.7974 (0.6891)  acc1: 81.2500 (84.4786)  acc5: 95.8333 (96.9595)  time: 1.2988  data: 0.0001  max mem: 6355
+Test:  [200/261]  eta: 0:01:26  loss: 0.7542 (0.6975)  acc1: 82.2917 (84.2558)  acc5: 96.3542 (96.8724)  time: 1.2936  data: 0.0001  max mem: 6355
+Test:  [210/261]  eta: 0:01:11  loss: 0.8234 (0.7044)  acc1: 82.8125 (84.1479)  acc5: 94.7917 (96.7713)  time: 1.2945  data: 0.0003  max mem: 6355
+Test:  [220/261]  eta: 0:00:57  loss: 0.8517 (0.7193)  acc1: 80.2083 (83.7717)  acc5: 94.2708 (96.6464)  time: 1.2969  data: 0.0003  max mem: 6355
+Test:  [230/261]  eta: 0:00:43  loss: 0.9425 (0.7232)  acc1: 77.6042 (83.6152)  acc5: 95.8333 (96.6157)  time: 1.3117  data: 0.0002  max mem: 6355
+Test:  [240/261]  eta: 0:00:29  loss: 0.8037 (0.7308)  acc1: 79.6875 (83.3830)  acc5: 96.8750 (96.5941)  time: 1.3165  data: 0.0000  max mem: 6355
+Test:  [250/261]  eta: 0:00:15  loss: 0.6793 (0.7283)  acc1: 81.7708 (83.4267)  acc5: 96.8750 (96.6156)  time: 1.3018  data: 0.0000  max mem: 6355
+Test:  [260/261]  eta: 0:00:01  loss: 0.6360 (0.7307)  acc1: 82.2917 (83.3540)  acc5: 97.3958 (96.6260)  time: 1.3297  data: 0.0001  max mem: 6355
+Test: Total time: 0:06:04 (1.3956 s / it)
+* Acc@1 83.354 Acc@5 96.626 loss 0.731
+Accuracy of the network on the 50000 test images: 83.4%

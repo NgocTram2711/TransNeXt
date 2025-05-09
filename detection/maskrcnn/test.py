@@ -6,7 +6,7 @@ import warnings
 
 import mmcv
 import torch
-from mmcv import Config, DictAction
+from mmengine import Config, DictAction
 from mmcv.cnn import fuse_conv_bn
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,

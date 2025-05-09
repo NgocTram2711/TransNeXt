@@ -1,0 +1,186 @@
+$ python test.py configs/upernet_transnext_tiny_512x512_160k_ade20k_ss.py checkpoints/upernet_transnext_tiny_512x512_160k_ade20k_in1k.pth --eval mIoU
+C:\Python311\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+swattention package not found, loading PyTorch native version of TransNeXt
+2025-04-28 20:53:02,706 - mmseg - INFO - Loaded 2000 images
+C:\Python311\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ..\aten\src\ATen\native\TensorShape.cpp:3484.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+C:\Python311\Lib\site-packages\mmseg\models\losses\cross_entropy_loss.py:235: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+load checkpoint from local path: checkpoints/upernet_transnext_tiny_512x512_160k_ade20k_in1k.pth
+[                                                  ] 0/2000, elapsed: 0s, ETA:C:\Python311\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+swattention package not found, loading PyTorch native version of TransNeXt
+C:\Python311\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+swattention package not found, loading PyTorch native version of TransNeXt
+C:\Python311\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+swattention package not found, loading PyTorch native version of TransNeXt
+C:\Python311\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+swattention package not found, loading PyTorch native version of TransNeXt
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 2000/2000, 14.2 task/s, elapsed: 141s, ETA:     0sper class results:
+
++---------------------+-------+-------+
+|        Class        |  IoU  |  Acc  |
++---------------------+-------+-------+
+|         wall        | 78.68 | 88.67 |
+|       building      | 83.76 | 92.32 |
+|         sky         | 94.51 |  97.6 |
+|        floor        |  82.1 | 91.41 |
+|         tree        | 75.87 | 88.38 |
+|       ceiling       | 84.89 | 91.63 |
+|         road        | 84.61 | 92.05 |
+|         bed         | 89.39 | 95.99 |
+|      windowpane     | 62.28 | 79.47 |
+|        grass        | 65.88 | 83.55 |
+|       cabinet       | 65.57 | 76.78 |
+|       sidewalk      | 66.05 | 78.99 |
+|        person       | 82.25 | 93.37 |
+|        earth        | 35.63 | 48.83 |
+|         door        |  52.5 | 68.49 |
+|        table        | 61.83 | 77.03 |
+|       mountain      | 63.08 |  73.9 |
+|        plant        | 53.71 | 64.88 |
+|       curtain       | 74.81 | 87.11 |
+|        chair        | 60.06 | 73.84 |
+|         car         |  85.5 | 92.92 |
+|        water        |  53.6 | 71.01 |
+|       painting      | 76.17 | 90.47 |
+|         sofa        | 68.22 | 84.24 |
+|        shelf        | 44.82 | 62.64 |
+|        house        | 52.46 | 66.26 |
+|         sea         | 55.44 | 76.87 |
+|        mirror       | 68.34 | 78.82 |
+|         rug         | 65.47 | 73.22 |
+|        field        | 30.54 | 46.31 |
+|       armchair      | 44.18 | 63.52 |
+|         seat        | 63.02 | 82.49 |
+|        fence        | 47.04 | 63.22 |
+|         desk        | 52.22 | 72.48 |
+|         rock        | 49.65 | 81.44 |
+|       wardrobe      | 53.36 | 69.07 |
+|         lamp        | 64.35 | 76.61 |
+|       bathtub       | 80.11 | 85.28 |
+|       railing       |  36.3 | 49.24 |
+|       cushion       | 62.56 | 76.44 |
+|         base        | 39.25 | 51.14 |
+|         box         | 32.67 | 42.96 |
+|        column       | 48.82 | 60.77 |
+|      signboard      | 37.76 | 53.53 |
+|   chest of drawers  | 43.16 | 60.72 |
+|       counter       | 36.94 | 41.13 |
+|         sand        | 39.71 |  61.2 |
+|         sink        | 73.78 | 81.79 |
+|      skyscraper     | 63.96 | 82.69 |
+|      fireplace      |  79.1 | 90.37 |
+|     refrigerator    | 80.35 | 90.24 |
+|      grandstand     | 45.25 | 70.11 |
+|         path        | 27.24 | 37.73 |
+|        stairs       | 30.54 | 38.48 |
+|        runway       | 65.99 | 87.17 |
+|         case        | 63.05 | 82.11 |
+|      pool table     | 90.95 | 97.18 |
+|        pillow       | 60.76 | 69.01 |
+|     screen door     | 65.94 |  71.1 |
+|       stairway      | 28.83 | 39.21 |
+|        river        |  8.97 | 16.81 |
+|        bridge       | 64.79 | 72.46 |
+|       bookcase      | 36.35 | 57.81 |
+|        blind        | 38.01 | 42.96 |
+|     coffee table    |  57.8 | 83.83 |
+|        toilet       | 84.39 | 92.27 |
+|        flower       | 41.79 | 58.13 |
+|         book        |  45.4 | 63.83 |
+|         hill        | 18.27 | 23.63 |
+|        bench        | 48.97 | 54.02 |
+|      countertop     | 56.32 | 73.26 |
+|        stove        | 78.55 | 86.35 |
+|         palm        | 51.19 |  73.0 |
+|    kitchen island   |  44.4 | 67.63 |
+|       computer      | 76.24 | 90.79 |
+|     swivel chair    | 49.17 | 67.44 |
+|         boat        | 39.87 | 48.68 |
+|         bar         | 44.09 | 59.01 |
+|    arcade machine   | 47.97 | 51.11 |
+|        hovel        | 28.86 | 38.25 |
+|         bus         | 87.45 | 96.63 |
+|        towel        | 64.59 | 80.57 |
+|        light        |  59.0 | 70.85 |
+|        truck        | 37.03 | 50.78 |
+|        tower        | 28.65 | 49.29 |
+|      chandelier     | 70.49 | 87.76 |
+|        awning       | 27.42 | 31.97 |
+|     streetlight     | 29.04 | 36.28 |
+|        booth        | 54.47 | 60.07 |
+| television receiver | 75.73 | 86.92 |
+|       airplane      | 65.19 | 77.53 |
+|      dirt track     | 15.35 | 19.77 |
+|       apparel       | 34.57 | 52.46 |
+|         pole        | 23.74 | 33.15 |
+|         land        |  5.89 |  8.21 |
+|      bannister      | 14.31 | 18.28 |
+|      escalator      | 30.86 | 41.92 |
+|       ottoman       |  53.9 | 71.11 |
+|        bottle       | 38.82 | 64.83 |
+|        buffet       | 51.68 | 64.46 |
+|        poster       | 33.61 |  44.4 |
+|        stage        | 14.95 | 26.09 |
+|         van         | 45.66 | 62.84 |
+|         ship        |  4.81 |  6.68 |
+|       fountain      | 19.91 | 21.57 |
+|    conveyer belt    | 81.85 | 88.94 |
+|        canopy       |  29.2 | 44.42 |
+|        washer       | 70.69 | 72.03 |
+|      plaything      | 34.51 | 46.52 |
+|    swimming pool    | 73.97 | 82.76 |
+|        stool        |  54.0 | 65.77 |
+|        barrel       | 33.25 | 70.25 |
+|        basket       | 40.61 | 50.64 |
+|      waterfall      | 58.13 | 75.91 |
+|         tent        | 95.74 | 98.08 |
+|         bag         | 17.27 | 22.27 |
+|       minibike      | 70.36 | 86.91 |
+|        cradle       | 86.38 | 97.06 |
+|         oven        |  32.6 | 67.08 |
+|         ball        | 41.75 | 49.57 |
+|         food        | 49.07 | 54.49 |
+|         step        |  16.8 | 19.89 |
+|         tank        | 49.13 | 58.51 |
+|      trade name     | 21.19 |  23.7 |
+|      microwave      | 65.58 | 72.82 |
+|         pot         | 45.65 | 53.57 |
+|        animal       | 61.79 | 64.27 |
+|       bicycle       | 56.81 | 80.92 |
+|         lake        | 55.05 | 62.87 |
+|      dishwasher     | 65.83 | 74.03 |
+|        screen       | 60.03 | 95.02 |
+|       blanket       | 17.41 | 19.66 |
+|      sculpture      | 62.83 | 74.17 |
+|         hood        |  53.2 | 66.18 |
+|        sconce       | 50.21 | 60.42 |
+|         vase        | 42.17 | 57.75 |
+|    traffic light    | 35.87 | 57.25 |
+|         tray        |  8.78 | 14.35 |
+|        ashcan       | 47.14 | 60.66 |
+|         fan         | 63.72 | 80.94 |
+|         pier        | 59.11 | 82.09 |
+|      crt screen     |  2.73 |  7.16 |
+|        plate        | 53.12 | 70.39 |
+|       monitor       |  2.79 |  3.24 |
+|    bulletin board   | 59.52 | 70.41 |
+|        shower       |  0.19 |  0.44 |
+|       radiator      | 63.41 | 70.91 |
+|        glass        | 16.06 | 17.47 |
+|        clock        | 42.64 | 51.17 |
+|         flag        | 45.09 | 51.42 |
++---------------------+-------+-------+
+Summary:
+
++-------+-------+------+
+|  aAcc |  mIoU | mAcc |
++-------+-------+------+
+| 83.98 | 51.11 | 63.3 |
++-------+-------+------+
+(.venv) 

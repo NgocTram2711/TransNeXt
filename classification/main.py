@@ -24,6 +24,7 @@ LICENSE file in the root directory of this source tree.
 
 import argparse
 import datetime
+import sys
 import numpy as np
 import time
 import torch
@@ -61,7 +62,7 @@ import transnext
 def get_args_parser():
     parser = argparse.ArgumentParser('TransNeXt training and evaluation script', add_help=False)
     parser.add_argument('--fp32-resume', action='store_true', default=False)
-    parser.add_argument('--batch-size', default=128, type=int)
+    parser.add_argument('--batch-size', default=64, type=int)
     parser.add_argument('--epochs', default=300, type=int)
     parser.add_argument('--update-freq', default=1, type=int,
                         help='Number of steps to accumulate gradients when updating parameters, set to 1 to disable this feature')
@@ -206,7 +207,7 @@ def get_args_parser():
     parser.add_argument('--compile-model', action='store_true')
     parser.add_argument('--no-compile-model', action='store_false', dest='compile_model')
     parser.set_defaults(compile_model=True)  # Default is to use torch.compile
-    parser.add_argument('--cache-size-limit', default=128, type=int)
+    parser.add_argument('--cache-size-limit', default=64, type=int)
 
     # distributed training parameters
     parser.add_argument('--world_size', default=1, type=int,
@@ -266,7 +267,7 @@ def main(args):
 
     data_loader_train = torch.utils.data.DataLoader(
         dataset_train, sampler=sampler_train,
-        batch_size=args.batch_size,
+        batch_size=64,
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
         drop_last=True,
@@ -274,7 +275,7 @@ def main(args):
 
     data_loader_val = torch.utils.data.DataLoader(
         dataset_val, sampler=sampler_val,
-        batch_size=int(1.5 * args.batch_size),
+        batch_size=int(1.5 * 64),
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
         drop_last=False
@@ -416,9 +417,8 @@ def main(args):
                 max_accuracy = checkpoint['max_accuracy']
                 print(f'Previous max accuracy record is {max_accuracy:.2f}%')
 
-    if args.compile_model:
+    if args.compile_model and not sys.platform.startswith("win"):
         model = torch.compile(model)
-        torch._dynamo.config.cache_size_limit = args.cache_size_limit
 
     if args.eval:
         test_stats = evaluate(data_loader_val, model, device)
